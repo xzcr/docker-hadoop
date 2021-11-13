@@ -1,4 +1,4 @@
-FROM zhix/hadoop-base
+FROM xzcr/hadoop-base
 
 LABEL maintainer="Josh Ng josh.ng@xzcr.io"
 

@@ -1,9 +1,8 @@
 version: "3"
 
-
 services:
   namenode:
-    image: zhix/hadoop-namenode
+    image: xzcr/hadoop-namenode
     container_name: namenode
     restart: always
     ports:
@@ -17,7 +16,7 @@ services:
       - ./hadoop.env
 
   datanode:
-    image: zhix/hadoop-datanode
+    image: xzcr/hadoop-datanode
     container_name: datanode
     restart: always
     volumes:
@@ -28,7 +27,7 @@ services:
       - ./hadoop.env
   
   resourcemanager:
-    image: zhix/hadoop-resourcemanager
+    image: xzcr/hadoop-resourcemanager
     container_name: resourcemanager
     restart: always
     environment:
@@ -37,7 +36,7 @@ services:
       - ./hadoop.env
 
   nodemanager1:
-    image: zhix/hadoop-nodemanager
+    image: xzcr/hadoop-nodemanager
     container_name: nodemanager
     restart: always
     environment:
@@ -46,7 +45,7 @@ services:
       - ./hadoop.env
   
   historyserver:
-    image: zhix/hadoop-historyserver
+    image: xzcr/hadoop-historyserver
     container_name: historyserver
     restart: always
     environment:
